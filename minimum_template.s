@@ -170,7 +170,7 @@ sloop:
 		add $t0, $t0, $a0
 
             # [$t2=V[$t0]] Load the value of memory address $t0 to $t2, $t2 = V[MaxIndex]
-		lb $t2, V($t0)
+		lw $t2, $t0
 
             # [$t1=$s0-1] The index (n - 1) that will be swapped with MaxIndex
 		add $t1, $s0, $0
@@ -183,13 +183,14 @@ sloop:
 		add $t1, $t1, $a0
 
             # [$t3=V[$t1]] Load the value of memory address $t1 to $t3, $t3 = V[n - 1]
-		lw $t3, V($t1)
+		lw $t3, $t1
 
             # [V[$t1]=$t2] Store V[n-1] to be V[MaxIndex]
-		sw V($t1), $t2
+		sw $t1, $t2
+		add 
 
             # [V[$t0]=$t3] Store V[MaxIndex] to be the original V[n - 1]
-		sw V($t0), $t3
+		sw $t0, $t3
 
             # [$s0=$s0-1] Len = Len - 1 
 		addi $s0, $s0, -1
