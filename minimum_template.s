@@ -187,7 +187,6 @@ sloop:
 
             # [V[$t1]=$t2] Store V[n-1] to be V[MaxIndex]
 		sw $t1, $t2
-		add 
 
             # [V[$t0]=$t3] Store V[MaxIndex] to be the original V[n - 1]
 		sw $t0, $t3
