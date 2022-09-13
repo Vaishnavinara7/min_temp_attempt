@@ -186,10 +186,10 @@ sloop:
 		lw $t3, $t1
 
             # [V[$t1]=$t2] Store V[n-1] to be V[MaxIndex]
-		sw $t1, $t2
+		sw $t2, $t1
 
             # [V[$t0]=$t3] Store V[MaxIndex] to be the original V[n - 1]
-		sw $t0, $t3
+		sw $t3, $t0
 
             # [$s0=$s0-1] Len = Len - 1 
 		addi $s0, $s0, -1
